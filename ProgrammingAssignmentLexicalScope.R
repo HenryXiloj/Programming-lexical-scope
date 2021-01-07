@@ -19,8 +19,15 @@ cacheSolve <- function(x, ...) {
     message("getting inversed matrix")
     return(s)
   }
+  
+   ## Get the matrix from our object
   data <- x$get()
+
   s <- solve(data, ...)
+  
+   ## Set the inverse to the object  
   x$setInverseSolve(s)
+  
+  ## Return the matrix
   s
 }
